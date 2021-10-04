@@ -1,2 +1,2 @@
-# ORCSite
-Official Orc Racing Club website
+# ORC Website
+Git repo for ORC website
