@@ -301,8 +301,22 @@ ul.roadmap li .event-title {
   text-transform: uppercase;
 }
 
+ul.roadmap li .event-subtitle {
+  color: #fff;
+  position: relative;
+  font-size: 0.65rem;
+  font-family: var(--titleFont);
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
 .event-content {
   color: #fff;
+}
+
+.strikeSpan:hover {
+  text-decoration: line-through;
 }
 
 #buyButton {
@@ -371,7 +385,7 @@ ul.roadmap li .event-title {
 #deckCards {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
 }
@@ -410,3 +424,20 @@ ul.roadmap li .event-title {
   ul.FAQ-questions li:hover h3 {
     color: var(--highlight);
   }
+
+#salesButtons {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+@media (max-width: 1500px) {
+    #salesButtons { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 750px) {
+    #salesButtons { grid-template-columns: repeat(1, 1fr); }
+}
