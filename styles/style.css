@@ -4,7 +4,7 @@ html {
 
 :root {
     /* 18rem multiplied by number of images/2 */
-    --ticker-width: calc(14 * 18rem);
+    --ticker-width: calc(10 * 18rem);
     --highlight: #85e0ab;
     --titleFont:'Roboto Mono', monospace;
     --bodyFont: 'Roboto Mono', monospace;
@@ -301,11 +301,25 @@ ul.roadmap li .event-title {
   text-transform: uppercase;
 }
 
+ul.roadmap li .event-subtitle {
+  color: #fff;
+  position: relative;
+  font-size: 0.65rem;
+  font-family: var(--titleFont);
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
 .event-content {
   color: #fff;
 }
 
-#buyButton {
+.strikeSpan:hover {
+  text-decoration: line-through;
+}
+
+.buyButton {
     background-color: var(--highlight);
     border-radius: 8px;
     border: 0;
@@ -317,7 +331,7 @@ ul.roadmap li .event-title {
     transition: .3s;
 }
 
-#buyButton:hover {
+.buyButton:hover {
     background-color: #fff;
 }
 
@@ -371,7 +385,7 @@ ul.roadmap li .event-title {
 #deckCards {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
 }
@@ -410,3 +424,20 @@ ul.roadmap li .event-title {
   ul.FAQ-questions li:hover h3 {
     color: var(--highlight);
   }
+
+#salesButtons {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+@media (max-width: 1500px) {
+    #salesButtons { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 750px) {
+    #salesButtons { grid-template-columns: repeat(1, 1fr); }
+}
